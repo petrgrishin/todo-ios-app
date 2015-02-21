@@ -52,6 +52,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="cJo-vE-k4K"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="N9f-L3-3ep"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPR-4P-qRe">
                                 <rect key="frame" x="128" y="518" width="65" height="30"/>
