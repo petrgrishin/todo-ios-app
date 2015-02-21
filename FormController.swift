@@ -14,6 +14,7 @@ import CoreData
 class FormController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var toDateField: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,8 @@ class FormController: UIViewController {
             var todo:TodoList!
             todo = NSEntityDescription.insertNewObjectForEntityForName("TodoList", inManagedObjectContext: managedObjectContext) as TodoList
             todo.title = textField.text
-            todo.toDate = NSDate()
+            todo.toDate = toDateField.date
+            
             
             var e: NSError?
             managedObjectContext.save(&e)

@@ -64,8 +64,10 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPR-4P-qRe">
-                                <rect key="frame" x="128" y="518" width="65" height="30"/>
-                                <state key="normal" title="Add New">
+                                <rect key="frame" x="90" y="508" width="140" height="40"/>
+                                <color key="backgroundColor" red="0.25900000000000001" green="0.52200000000000002" blue="0.95699999999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -102,26 +104,37 @@
                                     <navigationItem title="Title" id="wDj-QW-CUF"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCQ-pG-tAA">
-                                <rect key="frame" x="16" y="126" width="288" height="102"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XB9-ak-rVu">
-                                <rect key="frame" x="137" y="518" width="34" height="30"/>
+                                <rect key="frame" x="90" y="508" width="140" height="40"/>
+                                <color key="backgroundColor" red="0.25900000000000001" green="0.52200000000000002" blue="0.95699999999999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="saveTodo" destination="9wL-Dc-W4L" eventType="touchUpInside" id="oN4-on-l0E"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tBv-9U-mQS">
+                                <rect key="frame" x="0.0" y="272" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="446217592.80426598">
+                                    <!--2015-02-21 13:19:52 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Todo text" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uCQ-pG-tAA">
+                                <rect key="frame" x="16" y="459" width="288" height="30"/>
+                                <color key="tintColor" red="0.25900000000000001" green="0.52200000000000002" blue="0.95699999999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="y4x-qH-xM2"/>
                     <connections>
                         <outlet property="textField" destination="uCQ-pG-tAA" id="Tcp-VR-61W"/>
+                        <outlet property="toDateField" destination="tBv-9U-mQS" id="hoI-Ht-bdP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T3-bb-c8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
