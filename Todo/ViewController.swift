@@ -12,13 +12,13 @@ import CoreData
 
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var Table: UITableView!
 
     var todoList = [] as [TodoList]
 
     override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-        addTestTodo()
         todoList = getTodoList()
     }
 
@@ -47,18 +47,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             todoLists = managedObjectContext.executeFetchRequest(fetchRequest, error: &e) as [TodoList]
         }
         return todoLists
-    }
-
-    func addTestTodo() {
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext {
-            var todo:TodoList!
-            todo = NSEntityDescription.insertNewObjectForEntityForName("TodoList", inManagedObjectContext: managedObjectContext) as TodoList
-            todo.title = "Test todo"
-            todo.toDate = NSDate()
-
-            var e: NSError?
-            managedObjectContext.save(&e)
-        }
-
     }
 }

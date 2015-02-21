@@ -76,15 +76,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="l2F-cg-p8M"/>
+                    <connections>
+                        <outlet property="Table" destination="RUt-Qa-r4g" id="rfc-Qn-adI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162" y="395"/>
         </scene>
-        <!--View Controller-->
+        <!--Form Controller-->
         <scene sceneID="pbb-X9-j80">
             <objects>
-                <viewController id="9wL-Dc-W4L" sceneMemberID="viewController">
+                <viewController id="9wL-Dc-W4L" customClass="FormController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j6d-w9-k6M"/>
                         <viewControllerLayoutGuide type="bottom" id="OJN-P5-DjT"/>
@@ -99,10 +102,27 @@
                                     <navigationItem title="Title" id="wDj-QW-CUF"/>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCQ-pG-tAA">
+                                <rect key="frame" x="16" y="126" width="288" height="102"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XB9-ak-rVu">
+                                <rect key="frame" x="137" y="518" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveTodo" destination="9wL-Dc-W4L" eventType="touchUpInside" id="oN4-on-l0E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="y4x-qH-xM2"/>
+                    <connections>
+                        <outlet property="textField" destination="uCQ-pG-tAA" id="Tcp-VR-61W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T3-bb-c8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
