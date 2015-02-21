@@ -12,7 +12,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var todoList = ["One todo", "Two todo"]
+    var todoList = [["title": "One todo", "toDate": "2014-01-01"], ["title": "Two todo", "toDate": "2015-01-01"]]
 
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,7 +31,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath index: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as UITableViewCell
-        cell.textLabel?.text = todoList[index.row]
+        cell.textLabel?.text = todoList[index.row]["title"]
+        cell.detailTextLabel?.text = todoList[index.row]["toDate"];
         return cell
     }
 
