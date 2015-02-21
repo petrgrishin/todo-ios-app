@@ -22,6 +22,42 @@
             </objects>
             <point key="canvasLocation" x="162.66666666666666" y="395.70666666666665"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="pbb-X9-j80">
+            <objects>
+                <viewController id="9wL-Dc-W4L" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j6d-w9-k6M"/>
+                        <viewControllerLayoutGuide type="bottom" id="OJN-P5-DjT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EZL-gm-bHd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0T3-bb-c8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="643" y="635"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eRP-SP-bae">
+            <objects>
+                <viewController id="YXo-iP-fwJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aqJ-zN-dUP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uum-1V-B6s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0xD-kS-tuW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rOg-r7-27j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="-89"/>
+        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
