@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+        Table.registerClass(TableViewCell.self, forCellReuseIdentifier: "Cell")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList", name:"load", object: nil)
         loadList()
     }

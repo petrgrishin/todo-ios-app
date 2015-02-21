@@ -15,6 +15,7 @@
 		347339A19136F0A439E92A81 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34733DC067EBF94BC702E8C6 /* TodoTests.swift */; };
 		34733BED0425DCB834CBA96E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473384F7707EF62DD43F8A4 /* ViewController.swift */; };
 		34733FC7EDB61BCBE521E7BF /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347333D6129866EE1309FDDA /* TodoList.swift */; };
+		4B393E9E1A98C61D001FE5AF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B393E9D1A98C61D001FE5AF /* TableViewCell.swift */; };
 		7ADEB22F1A98AC1200409BFB /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADEB22E1A98AC1200409BFB /* FormController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		34733DC067EBF94BC702E8C6 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
 		34733EB4C4EEF149E05439C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		34733F2E5E1D3DA6528A87C5 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B393E9D1A98C61D001FE5AF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		7ADEB22E1A98AC1200409BFB /* FormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormController.swift; path = ../FormController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 				34733BFD417C991A7FA62CDD /* Main.storyboard */,
 				3473384F7707EF62DD43F8A4 /* ViewController.swift */,
 				347334E6339F09C695819FBE /* Entity */,
+				4B393E9D1A98C61D001FE5AF /* TableViewCell.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				34733848FFB6CBCFBD5DA12E /* AppDelegate.swift in Sources */,
 				34733603F09E2EF4712653B1 /* Todo.xcdatamodeld in Sources */,
 				34733BED0425DCB834CBA96E /* ViewController.swift in Sources */,
+				4B393E9E1A98C61D001FE5AF /* TableViewCell.swift in Sources */,
 				34733FC7EDB61BCBE521E7BF /* TodoList.swift in Sources */,
 				7ADEB22F1A98AC1200409BFB /* FormController.swift in Sources */,
 			);
