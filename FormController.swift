@@ -35,6 +35,10 @@ class FormController: UIViewController {
             
             var e: NSError?
             managedObjectContext.save(&e)
+
+            NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
+
+            self.navigationController?.popViewControllerAnimated(true)
         }
     }
 }

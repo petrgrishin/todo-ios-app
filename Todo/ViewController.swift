@@ -19,7 +19,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-        todoList = getTodoList()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList", name:"load", object: nil)
+        loadList()
     }
 
 
@@ -47,5 +48,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             todoLists = managedObjectContext.executeFetchRequest(fetchRequest, error: &e) as [TodoList]
         }
         return todoLists
+    }
+
+    func loadList() {
+        todoList = getTodoList()
+        Table.reloadData()
     }
 }
