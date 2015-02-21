@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath index: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as UITableViewCell
         cell.textLabel?.text = todoList[index.row]["title"]
-        cell.detailTextLabel?.text = todoList[index.row]["toDate"];
+        cell.detailTextLabel?.text = todoList[index.row]["toDate"]
         return cell
     }
 
