@@ -35,9 +35,13 @@ class FormController: UIViewController {
             todo.toDate = toDateField.date
             
             
-            var e: NSError?
-            managedObjectContext.save(&e)
+//            var e: NSError?
+            do {
+                try managedObjectContext.save()
+            } catch {
 
+            }
+            
             NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
 
             self.navigationController?.popViewControllerAnimated(true)
