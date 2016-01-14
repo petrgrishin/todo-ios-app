@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath index: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as! UITableViewCell
         cell.textLabel?.text = todoList[index.row].title
         cell.detailTextLabel?.text = todoList[index.row].toDate.description
         return cell
@@ -43,10 +43,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func getTodoList() -> [TodoList] {
         var todoLists = [] as [TodoList]
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext {
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
             let fetchRequest = NSFetchRequest(entityName: "TodoList")
             var e: NSError?
-            todoLists = managedObjectContext.executeFetchRequest(fetchRequest, error: &e) as [TodoList]
+            todoLists = managedObjectContext.executeFetchRequest(fetchRequest, error: &e) as! [TodoList]
         }
         return todoLists
     }

@@ -28,9 +28,9 @@ class FormController: UIViewController {
     }
     
     @IBAction func saveTodo() {
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext {
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
             var todo:TodoList!
-            todo = NSEntityDescription.insertNewObjectForEntityForName("TodoList", inManagedObjectContext: managedObjectContext) as TodoList
+            todo = NSEntityDescription.insertNewObjectForEntityForName("TodoList", inManagedObjectContext: managedObjectContext) as! TodoList
             todo.title = textField.text
             todo.toDate = toDateField.date
             
