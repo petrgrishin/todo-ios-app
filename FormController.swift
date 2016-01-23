@@ -21,30 +21,37 @@ class FormController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func saveTodo() {
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
-            var todo:TodoList!
-            todo = NSEntityDescription.insertNewObjectForEntityForName("TodoList", inManagedObjectContext: managedObjectContext) as! TodoList
-            todo.title = textField.text
-            todo.toDate = toDateField.date
+        let text = textField.text
+        let date = toDateField.date
+        
+        guard  text != "" else {
+            return
+        }
+        
+        guard let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext else {
+            return
+        }
+        
+        let todo:TodoList! = NSEntityDescription.insertNewObjectForEntityForName("TodoList", inManagedObjectContext: managedObjectContext) as! TodoList
+        todo.title = text
+        todo.toDate = date
             
             
 //            var e: NSError?
-            do {
-                try managedObjectContext.save()
-            } catch {
-
-            }
-            
-            NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
-
-            self.navigationController?.popViewControllerAnimated(true)
+        do {
+            try managedObjectContext.save()
+        } catch {
         }
+            
+        NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
+        
+        self.navigationController?.popViewControllerAnimated(true)
+
     }
 }
