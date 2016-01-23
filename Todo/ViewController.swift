@@ -37,7 +37,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath index: NSIndexPath) -> UITableViewCell {
         let cell: TableViewCell = TableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         cell.textLabel?.text = todoList[index.row].title
-        cell.detailTextLabel?.text = todoList[index.row].toDate.description
+        
+        let formatter = NSDateFormatter()
+        //formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        //formatter.timeStyle = .ShortStyle
+        formatter.dateFormat = "dd.MM.yyyy, hh:mm"
+    
+        cell.detailTextLabel?.text = formatter.stringFromDate(todoList[index.row].toDate)
 //        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as! TableViewCell
 //        if (cell.titleField != nil) {
 //            cell.titleField!.text = todoList[index.row].title
