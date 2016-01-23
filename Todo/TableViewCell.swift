@@ -27,13 +27,12 @@ class TableViewCell: UITableViewCell {
     }
 
     required init(coder aDecoder: NSCoder) {
-        fatalError("NSCoding not supported")
+        super.init(coder: aDecoder)!
+        //fatalError("NSCoding not supported")
     }
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.title = UILabel()
-        self.dateText = UILabel()
 
         let recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
         recognizer.delegate = self

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CdI-qg-QZp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CdI-qg-QZp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -8,6 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="o92-bl-qNk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUV-gI-grd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="CdI-qg-QZp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HMl-dT-3n6">
                         <autoresizingMask key="autoresizingMask"/>
@@ -16,7 +17,6 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="23O-fS-G82"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nUV-gI-grd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-378" y="395"/>
         </scene>
@@ -25,43 +25,41 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="IFh-gX-j5O"/>
+                        <viewControllerLayoutGuide type="bottom" id="DyI-ta-ma2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RUt-Qa-r4g">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RUt-Qa-r4g">
                                 <rect key="frame" x="0.0" y="20" width="320" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="wUc-Tv-5ak" detailTextLabel="A9F-hy-NhN" style="IBUITableViewCellStyleSubtitle" id="ctf-sC-2VX" customClass="TableViewCell" customModule="Todo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="56" id="ctf-sC-2VX" customClass="TableViewCell" customModule="Todo">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ctf-sC-2VX" id="6O8-YU-R0T">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wUc-Tv-5ak">
-                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndH-8c-lUm">
+                                                    <rect key="frame" x="36" y="8" width="29" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A9F-hy-NhN">
-                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dateText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31c-qH-qWY">
+                                                    <rect key="frame" x="158" y="7" width="66" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateText" destination="A9F-hy-NhN" id="CG1-n8-96y"/>
-                                            <outlet property="title" destination="wUc-Tv-5ak" id="iqW-jr-8kf"/>
+                                            <outlet property="dateText" destination="31c-qH-qWY" id="SRh-KZ-kx6"/>
+                                            <outlet property="title" destination="ndH-8c-lUm" id="J9b-JX-WUR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -98,8 +96,8 @@
             <objects>
                 <viewController id="9wL-Dc-W4L" customClass="FormController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="j6d-w9-k6M"/>
-                        <viewControllerLayoutGuide type="bottom" id="OJN-P5-DjT"/>
+                        <viewControllerLayoutGuide type="top" id="t16-sa-xZV"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Kv-2u-9At"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EZL-gm-bHd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -147,24 +145,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T3-bb-c8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640" y="566"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="eRP-SP-bae">
-            <objects>
-                <viewController id="YXo-iP-fwJ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aqJ-zN-dUP"/>
-                        <viewControllerLayoutGuide type="bottom" id="Uum-1V-B6s"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0xD-kS-tuW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rOg-r7-27j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="640" y="-89"/>
         </scene>
     </scenes>
 </document>

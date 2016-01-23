@@ -17,17 +17,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var todoList = [] as [TodoList]
 
     override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-        Table.registerClass(TableViewCell.self, forCellReuseIdentifier: "Cell")
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        //Table.registerClass(TableViewCell.self, forCellReuseIdentifier: "Cell")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList", name:"load", object: nil)
         loadList()
     }
 
 
     override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,10 +36,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath index: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as! TableViewCell
-        //cell.textLabel?.text = todoList[index.row].title
-        //cell.detailTextLabel?.text = todoList[index.row].toDate.description
         cell.title!.text = todoList[index.row].title
-        cell.dateText!.text = todoList[index.row].title
+        cell.dateText!.text = todoList[index.row].toDate.description
         
         return cell
     }
