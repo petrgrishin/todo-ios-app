@@ -35,12 +35,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath index: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as! TableViewCell
-        //cell.textLabel?.text = todoList[index.row].title
-        //cell.detailTextLabel?.text = todoList[index.row].toDate.description
-        cell.title!.text = todoList[index.row].title
-        cell.dateText!.text = todoList[index.row].title
-        
+        let cell: TableViewCell = TableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        cell.textLabel?.text = todoList[index.row].title
+        cell.detailTextLabel?.text = todoList[index.row].toDate.description
+//        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as! TableViewCell
+//        if (cell.titleField != nil) {
+//            cell.titleField!.text = todoList[index.row].title
+//        }
+//        if (cell.dateField != nil) {
+//            cell.dateField!.text = todoList[index.row].toDate.description
+//        }
         return cell
     }
 

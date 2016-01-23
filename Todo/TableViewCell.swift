@@ -10,12 +10,12 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    let padding: CGFloat = 5
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false
+//    var titleField: UILabel!
+//    var dateField: UILabel!
     
-    @IBOutlet var title: UILabel!
-    @IBOutlet var dateText: UILabel!
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,14 +32,21 @@ class TableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.title = UILabel()
-        self.dateText = UILabel()
+        
+//        titleField = UILabel(frame: CGRectZero)
+//        contentView.addSubview(titleField)
 
+        
         let recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
         recognizer.delegate = self
         addGestureRecognizer(recognizer)
 
     }
+    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        titleField.frame = CGRectMake(padding, (frame.height - 25)/2, 400, 25)
+//    }
 
     func handlePan(recognizer: UIPanGestureRecognizer) {
         // 1

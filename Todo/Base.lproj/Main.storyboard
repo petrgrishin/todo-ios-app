@@ -43,14 +43,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wUc-Tv-5ak">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="title" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wUc-Tv-5ak">
                                                     <rect key="frame" x="15" y="5" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A9F-hy-NhN">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="dateText" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A9F-hy-NhN">
                                                     <rect key="frame" x="15" y="25" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -61,7 +61,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateText" destination="A9F-hy-NhN" id="CG1-n8-96y"/>
-                                            <outlet property="title" destination="wUc-Tv-5ak" id="iqW-jr-8kf"/>
+                                            <outlet property="title" destination="wUc-Tv-5ak" id="bZB-Vz-GtN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
