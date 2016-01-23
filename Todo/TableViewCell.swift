@@ -12,6 +12,9 @@ class TableViewCell: UITableViewCell {
 
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false
+    
+    @IBOutlet var title: UILabel!
+    @IBOutlet var dateText: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +32,8 @@ class TableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.title = UILabel()
+        self.dateText = UILabel()
 
         let recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
         recognizer.delegate = self
