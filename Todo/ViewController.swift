@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: index) as! TableViewCell
         cell.title!.text = todoList[index.row].title
         cell.dateText!.text = todoList[index.row].toDate.description
-        
+        cell.controller = self
         return cell
     }
 
@@ -54,6 +54,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
         return todoLists
+    }
+    
+    func removeItem (cell: UITableViewCell) {
+        let index = Table.indexPathForCell(cell)!.row
+        let record = todoList[index]
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+            managedObjectContext.deleteObject(record);
+        }
+        loadList()
     }
 
     func loadList() {

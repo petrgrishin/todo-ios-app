@@ -8,7 +8,6 @@
         <!--Navigation Controller-->
         <scene sceneID="o92-bl-qNk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nUV-gI-grd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="CdI-qg-QZp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HMl-dT-3n6">
                         <autoresizingMask key="autoresizingMask"/>
@@ -17,6 +16,7 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="23O-fS-G82"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUV-gI-grd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-378" y="395"/>
         </scene>
@@ -43,14 +43,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndH-8c-lUm">
-                                                    <rect key="frame" x="36" y="8" width="29" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dateText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31c-qH-qWY">
+                                                    <rect key="frame" x="36" y="26" width="221" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dateText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31c-qH-qWY">
-                                                    <rect key="frame" x="158" y="7" width="66" height="21"/>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bus-UJ-zQ1">
+                                                    <rect key="frame" x="86" y="8" width="121" height="30"/>
+                                                    <state key="normal" title="Удалить заметку">
+                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteCell:" destination="ctf-sC-2VX" eventType="touchDown" id="kri-uU-tLZ"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndH-8c-lUm">
+                                                    <rect key="frame" x="36" y="0.0" width="221" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -59,6 +68,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateText" destination="31c-qH-qWY" id="SRh-KZ-kx6"/>
+                                            <outlet property="deleteButton" destination="bus-UJ-zQ1" id="s1s-iE-Nj4"/>
                                             <outlet property="title" destination="ndH-8c-lUm" id="J9b-JX-WUR"/>
                                         </connections>
                                     </tableViewCell>
