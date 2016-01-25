@@ -60,8 +60,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let index = Table.indexPathForCell(cell)!.row
         let record = todoList[index]
         if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
-            managedObjectContext.deleteObject(record);
+            managedObjectContext.deleteObject(record)
+            try! managedObjectContext.save()
         }
+        
         loadList()
     }
 
